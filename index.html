@@ -184,6 +184,8 @@ function nawigujDoStacji(destLat, destLon) {
                 L.latLng(destLat, destLon)
             ],
             routeWhileDragging: false,
+            addWaypoints: false,
+            addWaypoints: false,
             language: 'pl',
             createMarker: () => null,
             lineOptions: { styles: [{ color: '#2E75B6', weight: 4 }] }
@@ -301,7 +303,7 @@ function szukajAdresu() {
                               className: '',
                               html: i === 0
                                 ? '<div style="width:14px;height:14px;background:#1F3864;border:3px solid white;border-radius:50%;box-shadow:0 0 6px rgba(0,0,0,0.4)"></div>'
-                                : '<div style="width:16px;height:16px;background:#E53935;border:3px solid white;border-radius:50%;box-shadow:0 0 6px rgba(0,0,0,0.4)"></div>',
+                                : '<div style="width:16px;height:16px;background:#E53935;border:3px solid white;border-radius:3px;box-shadow:0 0 6px rgba(0,0,0,0.4)"></div>',
                               iconAnchor: [7, 7]
                           })
                       });
