@@ -197,7 +197,7 @@ function nawigujDoStacji(destLat, destLon) {
             }),
             routeWhileDragging: false,
             language: 'pl',
-            lineOptions: { styles: [{ color: '#2E75B6', weight: 4 }] }
+            lineOptions: { addWaypoints: false, styles: [{ color: '#2E75B6', weight: 4 }] }
         }).addTo(map);
         map.closePopup();
     }, () => alert("Nie udało się pobrać lokalizacji GPS."));
@@ -321,7 +321,7 @@ function szukajAdresu() {
                   }),
                   routeWhileDragging: false,
                   language: 'pl',
-                  lineOptions: { styles: [{ color: '#2E75B6', weight: 4 }] }
+                  lineOptions: { addWaypoints: false, styles: [{ color: '#2E75B6', weight: 4 }] }
               }).addTo(map);
           }, () => {
               map.setView([destLat, destLon], 10);
