@@ -56,13 +56,7 @@
     text-decoration: none; margin-top: 4px;
   }
   .nav-btn:hover { background: #1F3864; }
-  #legend {
-    position: absolute; bottom: 30px; left: 10px; background: white;
-    padding: 8px 12px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    font-size: 12px; z-index: 1000;
-  }
-  .leg-item { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
-  .leg-dot { width: 12px; height: 12px; border-radius: 50%; }
+
 
   #btn-locate {
     background: white; border: 2px solid #ccc; border-radius: 8px;
@@ -95,7 +89,7 @@
   #top-controls {
     position: absolute; top: -46px; right: 10px; z-index: 1000;
     display: flex; flex-direction: column; gap: 6px; align-items: flex-end;
-    max-width: calc(100vw - 20px); width: 280px;
+    max-width: calc(100vw - 20px); width: 220px;
   }
   @media (max-width: 400px) {
     #top-controls { width: calc(100vw - 20px); }
@@ -124,13 +118,13 @@
 <div id="map-wrap">
 <div id="map"></div>
 <div id="top-controls">
+  <div id="search-box">
+    <input id="dest-input" type="text" placeholder="Adres docelowy..." />
+    <button id="btn-route" onclick="szukajAdresu()">🧭</button>
+  </div>
   <button id="btn-locate" onclick="lokalizujMnie()">📍 Moja lokalizacja</button>
   <button id="btn-cheapest" onclick="najtanszaWPoblizu()">💰 Najtańsza w pobliżu</button>
   <button id="btn-track" onclick="toggleTracking()">📍 Śledź pozycję</button>
-  <div id="search-box">
-    <input id="dest-input" type="text" placeholder="Wpisz adres docelowy..." />
-    <button id="btn-route" onclick="szukajAdresu()">🧭 Nawiguj</button>
-  </div>
 </div>
 </div>
 
@@ -424,14 +418,7 @@ function toggleTracking() {
 }
 </script>
 
-<div id="legend">
-  <div style="font-weight:bold;margin-bottom:4px;">Legenda</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#2196F3"></div>AS24</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#F44336"></div>OMV</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#FF9800"></div>MOEVE</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#4CAF50"></div>ORLEN</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#FFC107;border:1px solid #333"></div>⭐ Zniżki</div>
-</div>
+
 
 </body>
 </html>
