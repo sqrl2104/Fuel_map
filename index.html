@@ -142,6 +142,7 @@ let markery = [];
 let userMarker = null;
 let routingControl = null;
 const map = L.map('map', {
+    zoomControl: false,
     rotate: true,
     touchRotate: true,
     rotateControl: {
@@ -367,7 +368,7 @@ function najtanszaWPoblizu() {
             })
         }).addTo(map);
 
-        alert('💰 Najtańsza w ' + promienKm + ' km:\n' + best.dostawca + ' — ' + best.nazwa + '\nDiesel: ' + best.diesel.toFixed(4) + ' EUR/L\nOdległość: ' + bestDist.toFixed(1) + ' km');
+        
 
     }, () => alert("Nie udało się pobrać lokalizacji GPS."));
 }
